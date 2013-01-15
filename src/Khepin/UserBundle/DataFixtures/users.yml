@@ -1,0 +1,16 @@
+model: Khepin\UserBundle\Entity\User
+persistence: orm
+service_calls:
+    set_password:
+        service:    fos_user.user_manager
+        method:     updateUser
+fixtures:
+  user_bob:
+    email: bob@example.com
+    username: bob
+    plain_password: bob
+    enabled: true
+  user_mike:
+    email: mike@example.com
+    username: mike
+    plain_password: mike
